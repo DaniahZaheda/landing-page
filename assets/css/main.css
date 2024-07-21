@@ -1,7 +1,5 @@
 @import url("base.css");
 
-/*note 
-hero section - about section*/
 /*start header*/
 .nav ul {
     display: flex;
@@ -17,7 +15,6 @@ hero section - about section*/
     flex-wrap: wrap;
     background-color: #fff;
     z-index: 9;
-
 }
 
 .header .logo {
@@ -93,17 +90,176 @@ hero section - about section*/
     }
 }
 
+@media(max-width:2560px) {
+    .hero {
+        background-size: cover;
+    }
+
+}
+
 /*end header*/
 
-/*start about*/
-.about-get {
+/* start hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 53%;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 1368px;
+    z-index: -1;
+    height: 470px;
+    background-color: #F5F5F5;
+}
 
-    flex-basis: 400px;
-    flex-grow: 1;
+.hero {
+    padding: 50px 0;
 }
 
 
+.hero-begin {
+    width: 400px;
 
+}
+
+.hero-begin .begin {
+    color: var(--maincolor);
+}
+
+
+.hero-begin .begin span {
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+
+.hero-begin p {
+    color: #969696;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.hero-begin h1 {
+    font-size: 47px;
+}
+
+.hero-begin h1 span {
+    color: var(--maincolor);
+}
+
+.hero-button .row {
+
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+.hero-button .register {
+    border: 1px solid var(--maincolor);
+    color: #fff;
+    background-color: var(--maincolor);
+    font-family: var(--subfont);
+    font-weight: 700;
+    padding: 5px 20px;
+    border-radius: 4px;
+}
+
+.hero-button .playvideo {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    font-weight: 600;
+}
+
+
+.hero-right-side img {
+    width: 329px;
+    height: 344px;
+}
+
+/*end hero */
+
+/*start about*/
+
+.about .row {
+    padding: 20px 0;
+}
+
+.about-get {
+    flex-basis: 400px;
+}
+
+.about-get span {
+    color: var(--maincolor);
+
+}
+
+.about-get h2 {
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.about-get p {
+    color: #969696;
+}
+
+.about-info {
+    padding-top: 10px;
+    font-size: 11px;
+    position: relative;
+}
+
+.about-info .row {
+    gap: 10px;
+}
+
+.professional-teacher,
+.course-certificate,
+.interesting-learning {
+    background-color: var(--maincolor);
+    border-radius: 10px;
+    width: 175px;
+    height: 175px;
+    padding: 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.professional-teacher img,
+.course-certificate img,
+.interesting-learning img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about-info h3 {
+    color: #fff;
+    margin-top: 35px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.about-info p {
+    color: #DDDDDD;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.arrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
 
 /*end about*/
 
@@ -113,9 +269,12 @@ hero section - about section*/
     padding: 30px 105px;
 }
 
+.stats .row {
+    gap: 60px;
+}
 
 .stats-course {
-    width: 435px;
+    flex-basis: 400px;
 }
 
 .stats-course span {
@@ -123,16 +282,14 @@ hero section - about section*/
 
 }
 
-.stats-left-side {
-
-    flex-basis: 400px;
-    flex-grow: 1;
-
-
+.stats-course p {
+    width: 42%;
 }
 
+
 .stats-left-side img {
-    width: 64%;
+    width: 329px;
+    height: 344px;
 
 }
 
@@ -147,6 +304,7 @@ hero section - about section*/
 
 .stats-course p {
     color: #DDDDDD;
+
 }
 
 .stats-info .stat {
@@ -163,7 +321,7 @@ hero section - about section*/
 
 .stats-info .row {
     justify-content: flex-start;
-    gap: 100px;
+    gap: 94px;
 
 }
 
@@ -332,8 +490,6 @@ hero section - about section*/
     position: relative;
     flex-grow: 1;
 }
-
-
 
 .testimonial:after {
     content: '';
